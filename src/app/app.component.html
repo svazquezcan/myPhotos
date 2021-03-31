@@ -1,0 +1,23 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+  <div class="row">
+    <div class="col">
+      <h3>Listado de fotos</h3>
+      <app-lista-fotos (fotoSeleccionada)="selecc($event)"></app-lista-fotos>
+    </div>
+    <div class="col-9">
+      <app-detalle-foto *ngIf="fotoSelecc" [foto]="fotoSelecc"></app-detalle-foto>
+    </div>
+  </div>
+
+ 
+<router-outlet></router-outlet>
