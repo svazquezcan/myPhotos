@@ -1,8 +1,5 @@
-<label for="filtrado">Filtrar</label>
-    <input type="text" name="filtrado" value="" [(ngModel)]="textoFiltrado">
-    {{textoFiltrado}}
 <ul class="text-left">
-    <li *ngFor="let foto of fotos" (click)="selecc(foto)">
+    <li *ngFor="let foto of fotos | filter: textoFiltrado" (click)="selecc(foto)">
     <span>{{foto.id}}</span> {{foto.nombre}}
     </li>
 </ul>
